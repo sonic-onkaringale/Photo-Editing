@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="sheet_peek">64dp</dimen>
+
+    <dimen name="tag_text_size">20sp</dimen>
+
+    <dimen name="dot_radius_1">1dp</dimen>
+    <dimen name="dot_radius_2">2dp</dimen>
+</resources>

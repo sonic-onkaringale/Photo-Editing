@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        >
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btn_addfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="40dp"
+            android:text="Pick File"
+            app:icon="@drawable/ic_add_48px"
+            app:layout_constraintEnd_toStartOf="@+id/btn_savefile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btn_savefile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="50dp"
+            android:text="Save"
+
+            app:icon="@drawable/ic_save_48px"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.magicgoop.tagsphere.TagSphereView
+            android:id="@+id/tagSphereView_infrag1"
+            android:layout_width="match_parent"
+            android:layout_height="347dp"
+            android:layout_weight="1"
+            android:padding="16dp"
+            app:easingFunction="easeOutExpo"
+            app:layout_constraintBottom_toTopOf="@+id/btn_setwallpaper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_addfile"
+            app:radius="3"
+
+            app:rotateOnTouch="true" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_addfile"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textSize="20sp"
+            android:text="Brightness"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_brightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="brightness"
+            android:value="0"
+            android:valueFrom="-255"
+            android:valueTo="255"
+            android:padding="4dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_brightness" />
+
+        <TextView
+            android:id="@+id/tv_contrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textSize="20sp"
+            android:text="Contrast"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_brightness" />
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_contrast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Contrast"
+            android:value="0"
+            android:valueFrom="-100"
+            android:valueTo="100"
+            android:padding="4dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_contrast" />
+
+        <TextView
+            android:id="@+id/tv_saturation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textSize="20sp"
+            android:text="Saturation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_contrast" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_saturation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Saturation"
+            android:value="0"
+            android:valueFrom="-100"
+            android:valueTo="100"
+            android:padding="4dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_saturation" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btn_setwallpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginEnd="30dp"
+
+
+            android:padding="4dp"
+            android:text="Set Wallpaper"
+            app:icon="@drawable/ic_info_48px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_aboutus"
+            app:layout_constraintTop_toBottomOf="@id/slider_saturation" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btn_aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginEnd="40dp"
+            android:padding="4dp"
+            android:text="About Us"
+            app:icon="@drawable/ic_info_48px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_saturation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
